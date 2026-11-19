@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Erika Guragain — QA Intern</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..800;1,9..144,300..700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#efe8da; --paper-2:#e6dcc8; --ink:#1d1a16; --muted:#5d5548;
+  --accent:#b8441f; --sage:#7d8a6b; --line:#1d1a1633;
+  --serif:'Fraunces',Georgia,serif; --sans:'Instrument Sans',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font:400 1.0625rem/1.65 var(--sans);overflow-x:hidden;
+  background-image:radial-gradient(#1d1a1608 1px,transparent 1px);background-size:5px 5px}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 clamp(1.25rem,5vw,3rem)}
+
+/* top bar */
+header.bar{position:absolute;inset:0 0 auto;z-index:5;padding:1.5rem 0}
+header.bar .wrap{display:flex;justify-content:space-between;align-items:baseline}
+.mark{font:italic 600 1.25rem var(--serif);text-decoration:none}
+nav a{margin-left:1.5rem;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;position:relative}
+nav a::after{content:"";position:absolute;left:0;bottom:-3px;height:2px;width:0;background:var(--accent);transition:width .3s}
+nav a:hover::after,nav a:focus-visible::after{width:100%}
+
+/* hero */
+.hero{min-height:100svh;display:grid;align-items:end;padding:7rem 0 4rem;position:relative}
+.hero .wrap{display:grid;grid-template-columns:repeat(12,1fr);gap:1rem;align-items:end}
+.hero h1{grid-column:1/-1;font:300 clamp(3.4rem,13vw,11rem)/.86 var(--serif);letter-spacing:-.04em;font-variation-settings:"opsz" 144}
+.hero h1 em{font-style:italic;font-weight:600;color:var(--accent);display:block;margin-left:clamp(1rem,12vw,10rem)}
+.hero .role{grid-column:1/6;font:italic 400 1.15rem var(--serif);color:var(--muted);margin-top:2rem}
+.hero .role b{font-style:normal;font-weight:600;color:var(--ink);display:block;font-size:1.6rem}
+.tagline{grid-column:7/-1;font:400 clamp(1.3rem,2.4vw,1.9rem)/1.25 var(--serif);margin-top:2rem;max-width:22ch;justify-self:end;text-align:right}
+.squiggle{position:absolute;right:6%;top:18%;width:140px;color:var(--sage);transform:rotate(12deg)}
+.stamp{position:absolute;left:clamp(1rem,7vw,6rem);top:22%;width:120px;height:120px;animation:spin 30s linear infinite}
+.stamp text{font:600 11px var(--sans);letter-spacing:.2em;fill:var(--ink)}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* about */
+section{padding:clamp(4rem,10vw,9rem) 0}
+.label{font:600 .75rem var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--accent);display:flex;gap:.75rem;align-items:center}
+.label::before{content:"";width:2.5rem;height:1px;background:currentColor}
+.about .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:2rem;margin-top:2.5rem}
+.portrait{grid-column:1/6;position:relative;transform:rotate(-2.5deg);align-self:start}
+.portrait .frame{aspect-ratio:4/5;background:var(--paper-2);border:1px solid var(--ink);padding:.6rem;box-shadow:10px 12px 0 var(--sage);position:relative}
+.portrait img{width:100%;height:100%;object-fit:cover;filter:grayscale(.3) contrast(1.05);display:block}
+.portrait .initials{position:absolute;inset:.6rem;display:grid;place-items:center;font:italic 300 7rem var(--serif);color:var(--accent);background:repeating-linear-gradient(135deg,transparent 0 14px,#1d1a1610 14px 15px)}
+.portrait figcaption{position:absolute;bottom:-1.6rem;right:.5rem;font:italic .9rem var(--serif);color:var(--muted);transform:rotate(1.5deg)}
+.text{grid-column:7/-1;padding-top:3rem}
+.text p:first-child::first-letter{font:600 4.6rem/.8 var(--serif);float:left;padding:.35rem .6rem 0 0;color:var(--accent)}
+.text p+p{margin-top:1.25rem}
+.edu{margin-top:2.5rem;padding:1rem 1.25rem;border-left:3px solid var(--accent);background:#ffffff55;transform:translateX(-1.5rem);max-width:30rem}
+.edu small{display:block;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.edu strong{font:600 1.2rem var(--serif)}
+
+/* experience */
+.exp{background:var(--ink);color:var(--paper);position:relative;clip-path:polygon(0 3%,100% 0,100% 97%,0 100%)}
+.exp .label{color:#e9a98f}
+.exp ol{list-style:none;padding:0;margin-top:2.5rem}
+.exp li{display:grid;grid-template-columns:minmax(8rem,1fr) 3fr;gap:2rem;padding:1.75rem 0;border-top:1px solid #efe8da40}
+.exp .when{font:italic 1rem var(--serif);color:#c9bfa9}
+.exp h3{font:400 clamp(1.8rem,4vw,3rem)/1.05 var(--serif)}
+.exp h3 em{color:#e9a98f}
+.exp p{color:#c9bfa9;margin-top:.5rem;max-width:52ch}
+
+/* work */
+.work h2,.contact h2{font:300 clamp(2.4rem,6vw,5rem)/1 var(--serif);letter-spacing:-.02em;margin-top:1rem}
+.work h2 em,.contact h2 em{color:var(--accent)}
+.projects{margin-top:4rem;display:grid;gap:5rem}
+.proj{display:grid;grid-template-columns:repeat(12,1fr);gap:1.5rem;align-items:center}
+.proj .num{font:italic 300 clamp(4rem,10vw,8rem)/1 var(--serif);color:var(--line);grid-column:1/3}
+.proj .img{grid-column:3/8;aspect-ratio:4/3;background:var(--sage);border:1px solid var(--ink);position:relative;overflow:hidden;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.proj .img img{width:100%;height:100%;object-fit:cover;display:block;position:relative}
+.proj .img span{position:absolute;inset:0;display:grid;place-items:center;font:italic 1.1rem var(--serif);color:var(--paper);text-align:center;padding:1rem;background:repeating-linear-gradient(45deg,#0000 0 18px,#ffffff14 18px 19px)}
+.proj .info{grid-column:8/-1}
+.proj:nth-child(even) .num{grid-column:11/13;grid-row:1;text-align:right}
+.proj:nth-child(even) .img{grid-column:5/10;grid-row:1}
+.proj:nth-child(even) .info{grid-column:1/5;grid-row:1}
+.proj:nth-child(1) .img{transform:rotate(-1.2deg)}
+.proj:nth-child(2) .img{transform:rotate(1deg)}
+.proj:nth-child(3) .img{transform:rotate(-.6deg)}
+.proj:hover .img{transform:rotate(0) scale(1.02)}
+.proj h3{font:500 1.9rem/1.1 var(--serif)}
+.proj .yr{font:italic .95rem var(--serif);color:var(--muted)}
+.proj p{margin-top:.75rem;color:var(--muted)}
+.tags{display:flex;flex-wrap:wrap;gap:.4rem;margin:1rem 0;list-style:none;padding:0}
+.tags li{font-size:.75rem;border:1px solid var(--ink);padding:.15rem .65rem;border-radius:99px}
+.proj a.go{font-weight:600;text-decoration:none;border-bottom:2px solid var(--accent)}
+
+/* contact */
+.contact{padding-bottom:3rem}
+.contact .links{display:flex;flex-wrap:wrap;gap:1rem 2.5rem;margin-top:2.5rem}
+.contact .links a{font:italic 400 clamp(1.3rem,3vw,2rem) var(--serif);text-decoration:none;border-bottom:2px solid var(--ink);padding-bottom:.1rem;transition:color .2s,border-color .2s}
+.contact .links a:hover{color:var(--accent);border-color:var(--accent)}
+footer{border-top:1px solid var(--line);margin-top:5rem;padding-top:1.25rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem;font-size:.8rem;color:var(--muted)}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .8s,transform .8s}
+.rv.in{opacity:1;transform:none}
+
+@media (max-width:760px){
+  nav a{margin-left:1rem}
+  .hero .role,.tagline{grid-column:1/-1;justify-self:start;text-align:left}
+  .stamp,.squiggle{display:none}
+  .portrait,.text{grid-column:1/-1}
+  .edu{transform:none}
+  .exp li{grid-template-columns:1fr;gap:.5rem}
+  .proj .num,.proj:nth-child(even) .num{grid-column:1/-1;text-align:left}
+  .proj .img,.proj:nth-child(even) .img,.proj .info,.proj:nth-child(even) .info{grid-column:1/-1;grid-row:auto}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+  .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<header class="bar"><div class="wrap">
+  <a class="mark" href="#top" id="mark"></a>
+  <nav aria-label="Primary"><a href="#about">About</a><a href="#experience">Experience</a><a href="#work">Work</a><a href="#contact">Contact</a></nav>
+</div></header>
+
+<main id="top">
+  <section class="hero" aria-label="Introduction">
+    <svg class="stamp" viewBox="0 0 120 120" aria-hidden="true">
+      <defs><path id="c" d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0"/></defs>
+      <text><textPath href="#c">QUALITY · ASSURANCE · BREAK IT · FIX IT · </textPath></text>
+      <circle cx="60" cy="60" r="6" fill="#b8441f"/>
+    </svg>
+    <svg class="squiggle" viewBox="0 0 140 40" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M3 20c12-22 20 22 32 0s20 22 32 0 20 22 32 0 20 22 36 0"/></svg>
+    <div class="wrap">
+      <h1 id="h-name"></h1>
+      <p class="role" id="h-role"></p>
+      <p class="tagline" id="h-tag"></p>
+    </div>
+  </section>
+
+  <section class="about" id="about"><div class="wrap">
+    <p class="label rv">About</p>
+    <div class="grid">
+      <figure class="portrait rv"><div class="frame" id="photo"></div><figcaption id="loc"></figcaption></figure>
+      <div class="text rv"><div id="about-text"></div><div class="edu" id="edu"></div></div>
+    </div>
+  </div></section>
+
+  <section class="exp" id="experience"><div class="wrap">
+    <p class="label rv">Experience</p><ol id="exp-list" class="rv"></ol>
+  </div></section>
+
+  <section class="work" id="work"><div class="wrap">
+    <p class="label rv">Selected work</p>
+    <h2 class="rv">Things I've <em>tested</em>, <br>poked &amp; documented.</h2>
+    <div class="projects" id="projects"></div>
+  </div></section>
+
+  <section class="contact" id="contact"><div class="wrap">
+    <p class="label rv">Contact</p>
+    <h2 class="rv">Let's find what <em>breaks.</em></h2>
+    <div class="links rv" id="links"></div>
+    <footer><span id="copy"></span><span id="fnote"></span></footer>
+  </div></section>
+</main>
+
+<script src="config.js"></script>
+<script>
+(function(){
+  var S = window.SITE, $ = function(id){return document.getElementById(id)};
+  var first = S.name.split(' ')[0], rest = S.name.split(' ').slice(1).join(' ');
+  document.title = S.name + " — " + S.title;
+  $('mark').textContent = S.name;
+  $('h-name').innerHTML = first + '<em>' + rest + '</em>';
+  $('h-role').innerHTML = '<b>' + S.title + '</b>' + S.education.degree + ' · ' + S.education.school;
+  $('h-tag').textContent = S.tagline;
+  $('loc').textContent = S.location;
+  $('about-text').innerHTML = S.about.map(function(p){return '<p>'+p+'</p>'}).join('');
+  $('edu').innerHTML = '<small>Education</small><strong>' + S.education.degree + '</strong><br>' + S.education.school + ' · ' + S.education.years;
+
+  var initials = S.name.split(' ').map(function(w){return w[0]}).join('');
+  var ph = $('photo'), img = new Image();
+  img.alt = S.photoAlt; img.onload = function(){ph.innerHTML='';ph.appendChild(img)};
+  ph.innerHTML = '<div class="initials" aria-hidden="true">'+initials+'</div>';
+  img.src = S.photo;
+
+  $('exp-list').innerHTML = S.experience.map(function(e){
+    return '<li><span class="when">'+e.period+'</span><div><h3>'+e.role+', <em>'+e.company+'</em></h3><p>'+e.notes+'</p></div></li>';
+  }).join('');
+
+  $('projects').innerHTML = S.projects.map(function(p,i){
+    return '<article class="proj rv"><span class="num" aria-hidden="true">0'+(i+1)+'</span>'+
+      '<div class="img"><span>'+p.title+'<br>(add image)</span><img src="'+p.image+'" alt="Screenshot of '+p.title+'" onerror="this.remove()"></div>'+
+      '<div class="info"><p class="yr">'+p.year+'</p><h3>'+p.title+'</h3><p>'+p.summary+'</p>'+
+      '<ul class="tags">'+p.tags.map(function(t){return '<li>'+t+'</li>'}).join('')+'</ul>'+
+      '<a class="go" href="'+p.link+'">View project &rarr;</a></div></article>';
+  }).join('');
+
+  var c = S.contact;
+  $('links').innerHTML = '<a href="mailto:'+c.email+'">'+c.email+'</a><a href="'+c.linkedin+'" target="_blank" rel="noopener">LinkedIn</a><a href="'+c.github+'" target="_blank" rel="noopener">GitHub</a>';
+  $('copy').textContent = '© ' + new Date().getFullYear() + ' ' + S.name;
+  $('fnote').textContent = S.footerNote;
+
+  var els = document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
+  var io = new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>
