@@ -39,7 +39,7 @@ window.SITE = {
 
   // PLACEHOLDER links — replace the URLs / address
   contact: {
-    email:    "your.email@gmail.com",
+    email:    "erikaguragain330@gmail.com",
     linkedin: "https://www.linkedin.com/in/your-handle",
     github:   "https://github.com/your-handle"
   },
